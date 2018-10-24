@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.5.0)
+  - CountryPickerSwift (1.4.4)
+  - SlideMenuControllerSwift (3.0.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - CountryPickerSwift
+  - SlideMenuControllerSwift
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CountryPickerSwift
+    - SlideMenuControllerSwift
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  CountryPickerSwift: e31e67f2b95eb1fa6ad230e9eb0b49b020526d99
+  SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: ba82f0ef4773f4c57e1db434a154f7735a1341b3
+
+COCOAPODS: 1.5.3

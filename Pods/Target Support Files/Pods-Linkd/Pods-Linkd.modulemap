@@ -1,0 +1,6 @@
+framework module Pods_Linkd {
+  umbrella header "Pods-Linkd-umbrella.h"
+
+  export *
+  module * { export * }
+}
