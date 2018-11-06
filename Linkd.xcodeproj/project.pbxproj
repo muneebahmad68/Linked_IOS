@@ -66,6 +66,9 @@
 		C58B4EB821661B0E00FCAC5D /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B4EB721661B0E00FCAC5D /* CustomView.swift */; };
 		C58B4EBB216620DC00FCAC5D /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B4EBA216620DC00FCAC5D /* SignIn.swift */; };
 		C5C6164421746C80009494FB /* UIViewControllerEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C6164321746C80009494FB /* UIViewControllerEX.swift */; };
+		C5F500232184654D00BD8098 /* ALFWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F500222184654D00BD8098 /* ALFWebService.swift */; };
+		C5F500262184658500BD8098 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F500242184658500BD8098 /* Extensions.swift */; };
+		C5F500272184658500BD8098 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F500252184658500BD8098 /* Utility.swift */; };
 		C5FA20FD2174BD480010B3F1 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA20FC2174BD480010B3F1 /* CheckBox.swift */; };
 		C5FA21002174D7420010B3F1 /* ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FA20FF2174D7420010B3F1 /* ForgetPassword.swift */; };
 /* End PBXBuildFile section */
@@ -161,6 +164,9 @@
 		C58B4EB721661B0E00FCAC5D /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		C58B4EBA216620DC00FCAC5D /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		C5C6164321746C80009494FB /* UIViewControllerEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerEX.swift; sourceTree = "<group>"; };
+		C5F500222184654D00BD8098 /* ALFWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALFWebService.swift; sourceTree = "<group>"; };
+		C5F500242184658500BD8098 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C5F500252184658500BD8098 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		C5FA20FC2174BD480010B3F1 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		C5FA20FF2174D7420010B3F1 /* ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassword.swift; sourceTree = "<group>"; };
 		D1CF5CE122F17385E62B3375 /* Pods-LinkdUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkdUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinkdUITests/Pods-LinkdUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -389,6 +395,7 @@
 			children = (
 				C5C6164221746C62009494FB /* Helper */,
 				C5FA20FB2174BD1E0010B3F1 /* For CheckBox */,
+				C5F500212184651D00BD8098 /* WebService */,
 				C58B4E822165FC5E00FCAC5D /* Linkd */,
 				C5FA20FE2174D7140010B3F1 /* ForgetPassword */,
 				C539B2E021775795005DB240 /* Sources */,
@@ -485,6 +492,16 @@
 				C5C6164321746C80009494FB /* UIViewControllerEX.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		C5F500212184651D00BD8098 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				C5F500222184654D00BD8098 /* ALFWebService.swift */,
+				C5F500242184658500BD8098 /* Extensions.swift */,
+				C5F500252184658500BD8098 /* Utility.swift */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 		C5FA20FB2174BD1E0010B3F1 /* For CheckBox */ = {
@@ -756,6 +773,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C58B4EB821661B0E00FCAC5D /* CustomView.swift in Sources */,
+				C5F500232184654D00BD8098 /* ALFWebService.swift in Sources */,
 				C52888AF216F75530044732D /* bViewController.swift in Sources */,
 				C52888A9216F751F0044732D /* SWRevealViewController.m in Sources */,
 				C51A02DD217DB229000DD0C1 /* ContactDetailModel.swift in Sources */,
@@ -770,9 +788,11 @@
 				C54D169D217F0CC40072EA5F /* ContactDetails.swift in Sources */,
 				C5249DB02170BD4F003D3F7A /* CountrySelectView.swift in Sources */,
 				C5249DB12170BD4F003D3F7A /* CountryTableViewCell.swift in Sources */,
+				C5F500272184658500BD8098 /* Utility.swift in Sources */,
 				C54D16A1217F1F340072EA5F /* SignInModel.swift in Sources */,
 				C5806D60216ABEF9000D109E /* EditCard.swift in Sources */,
 				C539B2E321775795005DB240 /* NextResponderTextField.swift in Sources */,
+				C5F500262184658500BD8098 /* Extensions.swift in Sources */,
 				C56CDB39216C94410006D041 /* Appointment.swift in Sources */,
 				C54BCD3E216DEC4100C36C06 /* Account.swift in Sources */,
 				C52888B0216F75530044732D /* MenuTableViewCell.swift in Sources */,

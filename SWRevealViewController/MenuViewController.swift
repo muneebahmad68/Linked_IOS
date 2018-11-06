@@ -15,6 +15,8 @@ class MenuViewController: UIViewController {
     var menuNameArr: Array = [String]()
     var iconeImage: Array = [UIImage]()
     
+    @IBOutlet weak var slideMenuUserName: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +33,15 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func logOutTapped(_ sender: Any) {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "SignIn") as! SignIn
+//                navigationController?.pushViewController(vc, animated: true)
+          UIApplication.shared.keyWindow?.rootViewController = vc
     }
-    */
+    
+
+
 
 }
 

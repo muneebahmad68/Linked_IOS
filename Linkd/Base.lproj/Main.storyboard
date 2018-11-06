@@ -337,7 +337,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done"/>
                                                     </textField>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mycardtick" translatesAutoresizingMaskIntoConstraints="NO" id="beb-QS-t83">
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mycardtick" translatesAutoresizingMaskIntoConstraints="NO" id="beb-QS-t83">
                                                         <rect key="frame" x="260" y="9" width="22" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="22" id="7Er-6Y-N29"/>
@@ -419,7 +419,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next"/>
                                                     </textField>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mycardtick" translatesAutoresizingMaskIntoConstraints="NO" id="slK-iG-3rv">
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mycardtick" translatesAutoresizingMaskIntoConstraints="NO" id="slK-iG-3rv">
                                                         <rect key="frame" x="153" y="9" width="22" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="22" id="0DC-Wu-oEU"/>
@@ -714,7 +714,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ContactDetailNextBtnTapped:" destination="4jg-zv-M5U" eventType="touchUpInside" id="x3y-0R-Ewq"/>
-                                    <action selector="NextBtnTapped:" destination="4jg-zv-M5U" eventType="touchUpInside" id="HDt-mc-IWR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -872,7 +871,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4W7-Da-hU4" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                                 <rect key="frame" x="13" y="5" width="295" height="38"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Company Name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-Xa-jCc" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-Xa-jCc" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="295" height="38"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -903,26 +902,36 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xv-cq-jO1" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                                 <rect key="frame" x="13" y="6" width="295" height="38"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Work Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndG-8g-H40" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Select Business Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ndG-8g-H40">
                                                         <rect key="frame" x="0.0" y="0.0" width="266" height="38"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="done"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="lCk-x9-qtZ" id="bNo-hK-b1V"/>
+                                                        </connections>
                                                     </textField>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-b6-4lf">
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-b6-4lf">
                                                         <rect key="frame" x="271" y="11" width="17" height="15"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="17" id="Bn5-O0-M6p"/>
                                                             <constraint firstAttribute="height" constant="15" id="mwL-Zk-nv3"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYi-br-0b5">
+                                                        <rect key="frame" x="266" y="0.0" width="29" height="38"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="ndG-8g-H40" firstAttribute="top" secondItem="4xv-cq-jO1" secondAttribute="top" id="3r3-BX-uCk"/>
                                                     <constraint firstItem="hZb-b6-4lf" firstAttribute="top" secondItem="4xv-cq-jO1" secondAttribute="top" constant="11" id="GRe-u3-6yw"/>
                                                     <constraint firstAttribute="bottom" secondItem="ndG-8g-H40" secondAttribute="bottom" id="Gj2-TU-BLV"/>
+                                                    <constraint firstItem="KYi-br-0b5" firstAttribute="top" secondItem="4xv-cq-jO1" secondAttribute="top" id="Hfz-ev-PBG"/>
                                                     <constraint firstAttribute="trailing" secondItem="hZb-b6-4lf" secondAttribute="trailing" constant="7" id="Miw-bk-1Ge"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KYi-br-0b5" secondAttribute="trailing" id="Y13-ST-rjP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="KYi-br-0b5" secondAttribute="bottom" id="ZMa-FJ-N1K"/>
+                                                    <constraint firstItem="KYi-br-0b5" firstAttribute="leading" secondItem="ndG-8g-H40" secondAttribute="trailing" id="fms-jQ-F7Y"/>
                                                     <constraint firstItem="ndG-8g-H40" firstAttribute="leading" secondItem="4xv-cq-jO1" secondAttribute="leading" id="vpw-60-AIZ"/>
                                                     <constraint firstItem="hZb-b6-4lf" firstAttribute="leading" secondItem="ndG-8g-H40" secondAttribute="trailing" constant="5" id="xge-yO-EZq"/>
                                                 </constraints>
@@ -949,7 +958,7 @@
                                                             <segue destination="gld-u2-eXO" kind="show" id="xMf-3v-L79"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Address Line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOZ-Ov-1Xm" userLabel="Address Line" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Enter your Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOZ-Ov-1Xm" userLabel="Address Line" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="266" height="38"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -993,7 +1002,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gle-ZW-tQZ" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                                 <rect key="frame" x="13" y="6" width="295" height="38"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Address Line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zL5-aJ-MuX" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Enter second Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zL5-aJ-MuX" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="295" height="38"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1027,28 +1036,38 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjo-lv-93W" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                                         <rect key="frame" x="13" y="5" width="143" height="38"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLE-du-lgM" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Select City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLE-du-lgM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="117" height="38"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="done"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="lCk-x9-qtZ" id="tMG-mr-LKP"/>
+                                                                </connections>
                                                             </textField>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="R6y-VM-1hY">
+                                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="R6y-VM-1hY">
                                                                 <rect key="frame" x="119" y="12" width="18" height="13"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="13" id="C7W-EA-bKZ"/>
                                                                     <constraint firstAttribute="width" constant="18" id="orf-57-CfH"/>
                                                                 </constraints>
                                                             </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mZ-fk-U2y">
+                                                                <rect key="frame" x="117" y="0.0" width="26" height="38"/>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="4mZ-fk-U2y" firstAttribute="leading" secondItem="fLE-du-lgM" secondAttribute="trailing" id="2Jf-oj-Ctf"/>
                                                             <constraint firstItem="fLE-du-lgM" firstAttribute="top" secondItem="xjo-lv-93W" secondAttribute="top" id="66R-F5-Tml"/>
                                                             <constraint firstAttribute="bottom" secondItem="fLE-du-lgM" secondAttribute="bottom" id="L18-vN-iKc"/>
                                                             <constraint firstAttribute="trailing" secondItem="R6y-VM-1hY" secondAttribute="trailing" constant="6" id="YXU-Vo-FWa"/>
                                                             <constraint firstItem="fLE-du-lgM" firstAttribute="leading" secondItem="xjo-lv-93W" secondAttribute="leading" id="Zir-MO-fjf"/>
+                                                            <constraint firstItem="4mZ-fk-U2y" firstAttribute="top" secondItem="xjo-lv-93W" secondAttribute="top" id="eNm-95-xAw"/>
+                                                            <constraint firstAttribute="bottom" secondItem="4mZ-fk-U2y" secondAttribute="bottom" id="gM1-o3-de5"/>
                                                             <constraint firstItem="R6y-VM-1hY" firstAttribute="leading" secondItem="fLE-du-lgM" secondAttribute="trailing" constant="2" id="nyc-aW-bzU"/>
                                                             <constraint firstItem="R6y-VM-1hY" firstAttribute="top" secondItem="xjo-lv-93W" secondAttribute="top" constant="12" id="sFy-q4-5V4"/>
+                                                            <constraint firstAttribute="trailing" secondItem="4mZ-fk-U2y" secondAttribute="trailing" id="zAB-ni-2Mp"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -1066,7 +1085,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBX-7H-vEA" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                                         <rect key="frame" x="5" y="5" width="143" height="38"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NHR-p3-dZf">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Select Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NHR-p3-dZf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="117" height="38"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1197,6 +1216,7 @@
                     <navigationItem key="navigationItem" title="Work Detail" id="eiU-Xj-vgp"/>
                     <connections>
                         <outlet property="AddressLineTextField" destination="zL5-aJ-MuX" id="Hc3-QH-8VC"/>
+                        <outlet property="CityTextField" destination="fLE-du-lgM" id="Tc5-nt-pxZ"/>
                         <outlet property="CompanyNametextField" destination="Qdw-Xa-jCc" id="DZG-Ee-PUf"/>
                         <outlet property="CountryTextField" destination="NHR-p3-dZf" id="CYL-Kr-kXO"/>
                         <outlet property="FirstAddressLineTextFld" destination="zOZ-Ov-1Xm" id="AMX-K3-po8"/>
@@ -1269,7 +1289,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                                             </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="vCj-at-nZU">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="vCj-at-nZU">
                                                 <rect key="frame" x="267" y="10" width="19" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="FP1-wY-UOA"/>
@@ -1347,7 +1367,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
                                                     </textField>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-CX-OQ0">
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="Qch-CX-OQ0">
                                                         <rect key="frame" x="118" y="13" width="17" height="13"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="17" id="d1d-5l-Aup"/>
@@ -1496,11 +1516,14 @@
                         <viewLayoutGuide key="safeArea" id="UBp-p9-5G1"/>
                     </view>
                     <connections>
-                        <outlet property="AddressLine1TextField" destination="i9t-9s-E4b" id="zh8-sM-bXX"/>
+                        <outlet property="AddressLine1TextField" destination="dmN-gc-VNx" id="uKc-Ws-HLp"/>
+                        <outlet property="AddressLine2TextField" destination="i9t-9s-E4b" id="llu-F3-hnL"/>
                         <outlet property="CompanyName1textField" destination="ArH-wc-1bb" id="4Xz-2z-wKr"/>
+                        <outlet property="Country1TextField" destination="9Aa-U3-kBu" id="mMg-eS-7bE"/>
                         <outlet property="CountryTextField1" destination="9Aa-U3-kBu" id="Whs-jK-taS"/>
                         <outlet property="WorkEmail1TextField" destination="Wh2-w8-QQC" id="fGy-DA-hRc"/>
                         <outlet property="WorkTitle1TextField" destination="SiE-A9-b3V" id="eZB-FN-ZLJ"/>
+                        <outlet property="city1TextField" destination="LvI-EV-Ygq" id="vvE-zG-9F0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fw-8c-Z6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1701,6 +1724,16 @@
                                         <color key="textColor" red="0.55744230750000001" green="0.56068080659999997" blue="0.56064152720000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+256" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dR-cH-ljQ">
+                                        <rect key="frame" x="83" y="354" width="60" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="ORt-Ji-Hmb"/>
+                                            <constraint firstAttribute="width" constant="60" id="cCC-fn-Xsa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+256-794-442-4331" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEO-Zw-JKg">
                                         <rect key="frame" x="63" y="354" width="220" height="18"/>
                                         <constraints>
@@ -1754,6 +1787,7 @@
                                     <constraint firstItem="fzt-dG-VMt" firstAttribute="centerX" secondItem="4vo-R0-Zi4" secondAttribute="centerX" constant="17" id="C14-Sb-OIa"/>
                                     <constraint firstItem="DWW-0b-qdq" firstAttribute="top" secondItem="huP-68-JZm" secondAttribute="bottom" constant="7" id="F39-ef-6xm"/>
                                     <constraint firstItem="bEH-Q5-AZg" firstAttribute="top" secondItem="4vo-R0-Zi4" secondAttribute="top" constant="5" id="FSe-O2-dCc"/>
+                                    <constraint firstItem="5dR-cH-ljQ" firstAttribute="centerX" secondItem="4vo-R0-Zi4" secondAttribute="centerX" constant="-47" id="HwV-dS-7a2"/>
                                     <constraint firstItem="FsZ-Dq-pST" firstAttribute="top" secondItem="4vo-R0-Zi4" secondAttribute="top" constant="5" id="KA4-lG-9jZ"/>
                                     <constraint firstItem="FsZ-Dq-pST" firstAttribute="leading" secondItem="zds-Z4-6uA" secondAttribute="trailing" constant="2" id="LMi-X3-zJH"/>
                                     <constraint firstAttribute="trailing" secondItem="KwH-3B-xhF" secondAttribute="trailing" id="MGy-Rf-xCZ"/>
@@ -1772,6 +1806,7 @@
                                     <constraint firstItem="EEO-Zw-JKg" firstAttribute="centerX" secondItem="4vo-R0-Zi4" secondAttribute="centerX" constant="13" id="igv-gq-2xD"/>
                                     <constraint firstItem="EEO-Zw-JKg" firstAttribute="top" secondItem="KwH-3B-xhF" secondAttribute="bottom" id="jO8-Rz-cly"/>
                                     <constraint firstItem="DWW-0b-qdq" firstAttribute="centerX" secondItem="4vo-R0-Zi4" secondAttribute="centerX" constant="-57" id="jfP-zC-K2R"/>
+                                    <constraint firstItem="5dR-cH-ljQ" firstAttribute="top" secondItem="KwH-3B-xhF" secondAttribute="bottom" id="jsX-zm-utM"/>
                                     <constraint firstItem="0IN-4D-onG" firstAttribute="top" secondItem="FsZ-Dq-pST" secondAttribute="bottom" constant="29" id="kX6-qx-eid"/>
                                     <constraint firstItem="huP-68-JZm" firstAttribute="top" secondItem="EEO-Zw-JKg" secondAttribute="bottom" constant="1" id="klD-yw-iQz"/>
                                     <constraint firstItem="fzt-dG-VMt" firstAttribute="top" secondItem="huP-68-JZm" secondAttribute="bottom" constant="7" id="lLC-q2-yU9"/>
@@ -1798,12 +1833,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="MenuBarApear" destination="h7R-Hg-WM2" id="ERN-LS-sdb"/>
+                        <outlet property="UserNameLbl" destination="LaO-6W-7Hb" id="fX5-X5-NyX"/>
+                        <outlet property="addressLbl" destination="KwH-3B-xhF" id="nk4-dj-uCj"/>
+                        <outlet property="businessTypeLbl" destination="Xkk-dT-1mP" id="r12-4l-U5H"/>
+                        <outlet property="companyNameLbl" destination="kL7-CN-q4L" id="DFy-rE-0SB"/>
+                        <outlet property="gmailLbl" destination="huP-68-JZm" id="Zsu-k9-W6Q"/>
+                        <outlet property="phoneCodeLbl" destination="5dR-cH-ljQ" id="oHK-pu-5aG"/>
+                        <outlet property="phoneNumberLbl" destination="EEO-Zw-JKg" id="l5m-34-YRk"/>
+                        <outlet property="skypeIDLbl" destination="fzt-dG-VMt" id="mRP-4i-lcO"/>
                         <segue destination="5QK-0a-9Ig" kind="show" id="5Ip-qq-Qo7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4no-sC-ey6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="699" y="1552"/>
+            <point key="canvasLocation" x="697.5" y="1551.7605633802816"/>
         </scene>
         <!--Edit Card-->
         <scene sceneID="bWS-1T-JYQ">
@@ -1857,13 +1900,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnM-Fb-HQZ" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                         <rect key="frame" x="12" y="108" width="296" height="39"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Work Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viT-AR-pWx" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Select Business Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viT-AR-pWx" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="266" height="39"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="hpG-bK-Xxj" id="QQJ-OP-dme"/>
+                                                </connections>
                                             </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="jA2-Tu-Vaq">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="jA2-Tu-Vaq">
                                                 <rect key="frame" x="270" y="13" width="19" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="19" id="1gI-vV-Gla"/>
@@ -1885,7 +1931,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xad-YC-3FB" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                         <rect key="frame" x="12" y="154" width="296" height="39"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Address Line " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-Wa-SQy" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Enter your Address " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-Wa-SQy" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="267" height="39"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1913,7 +1959,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7h-y4-wkB" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                         <rect key="frame" x="12" y="200" width="296" height="39"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Address Line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2N0-ly-tje" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Enter Second Address " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2N0-ly-tje" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="296" height="39"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1935,13 +1981,16 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pi9-Cn-9tg" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                                 <rect key="frame" x="12" y="4" width="143" height="38"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e7Z-x1-rVE" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Select City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e7Z-x1-rVE" customClass="NextResponderTextField" customModule="Linkd" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="116" height="38"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="hpG-bK-Xxj" id="bNx-Ea-Yhw"/>
+                                                        </connections>
                                                     </textField>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="YDO-Fd-g7q">
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="YDO-Fd-g7q">
                                                         <rect key="frame" x="120" y="13" width="17" height="12"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="17" id="2q0-q0-czd"/>
@@ -1975,7 +2024,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJZ-3A-dW7" customClass="CornerView" customModule="Linkd" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="4" width="143" height="38"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qmq-Sn-ojU">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Select Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qmq-Sn-ojU">
                                                         <rect key="frame" x="0.0" y="0.0" width="116" height="38"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2091,11 +2140,14 @@
                         <viewLayoutGuide key="safeArea" id="XR0-Lu-bf7"/>
                     </view>
                     <connections>
-                        <outlet property="AddressLine1TextField" destination="2N0-ly-tje" id="pGi-Xc-i8K"/>
+                        <outlet property="CityEditCardTextField" destination="e7Z-x1-rVE" id="Kg1-Bm-44O"/>
                         <outlet property="CompanyName1TextField" destination="wuv-hb-t7G" id="otS-YC-qF4"/>
+                        <outlet property="CountryEditCardTextField" destination="qmq-Sn-ojU" id="oox-Hv-w8n"/>
                         <outlet property="CountryTextField2" destination="qmq-Sn-ojU" id="H5k-Ky-KAM"/>
                         <outlet property="WorkEmail1TextField" destination="ho2-Sh-ecH" id="6jO-Nf-bYe"/>
                         <outlet property="WorkTitle1TextField" destination="viT-AR-pWx" id="ghj-N6-w4c"/>
+                        <outlet property="frstAddressEditCardTextField" destination="qQ0-Wa-SQy" id="8hl-AX-eOh"/>
+                        <outlet property="scndAddressEditCardTextField" destination="2N0-ly-tje" id="JwI-gX-LuN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWy-do-eRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4255,7 +4307,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                             </textField>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mycardtick" translatesAutoresizingMaskIntoConstraints="NO" id="21b-fl-Zde">
+                                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mycardtick" translatesAutoresizingMaskIntoConstraints="NO" id="21b-fl-Zde">
                                                                 <rect key="frame" x="155" y="10" width="21" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="18" id="Yuo-pk-3cY"/>
@@ -4713,6 +4765,9 @@
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOutTapped:" destination="bmf-kJ-baR" eventType="touchUpInside" id="E3Z-Bj-GDo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.57851827144622803" green="0.20003888010978699" blue="0.40061604976654053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4736,6 +4791,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0EB-oF-ICe"/>
                     </view>
+                    <connections>
+                        <outlet property="slideMenuUserName" destination="X1a-8t-da2" id="tDU-GY-04d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVH-SD-1XJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

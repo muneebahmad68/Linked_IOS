@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let activityContainer : UIView = UIView()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -33,6 +34,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        appdelegate.window!.rootViewController = navigationController
     }
 
+    //
+    func ActivityIndicator(uiView: UIView) {
+        
+        activityContainer.frame = uiView.frame
+        activityContainer.center = uiView.center
+        activityContainer.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        let loadingView: UIView = UIView()
+        loadingView.frame = CGRect(x:0,y:0,width:80,height:80)
+        //CGRect(x:0, y:0, w:80, h:80)
+        loadingView.center = uiView.center
+        loadingView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        loadingView.clipsToBounds = true
+        loadingView.layer.cornerRadius = 10
+        
+        let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+        actInd.frame = CGRect(x:0,y:0,width:40,height:40)
+        actInd.activityIndicatorViewStyle =
+            UIActivityIndicatorViewStyle.whiteLarge
+        actInd.center = CGPoint(x:loadingView.frame.width/2,y:loadingView.frame.height/2)
+        loadingView.addSubview(actInd)
+        activityContainer.addSubview(loadingView)
+        uiView.addSubview(activityContainer)
+        actInd.startAnimating()
+    }
+    
+    func hideActivityIndicatory() {
+        activityContainer.removeFromSuperview()
+    }
+    //
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -10,18 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-//    @IBOutlet weak var barMenuButton: UIBarButtonItem!
-    
     @IBOutlet weak var barMenuButton: UIBarButtonItem!
+    
+    
+    // Variables For geting data
+    
+    var  businessTypeValue = ""
+    var companyNameValue = ""
+    var addressValue = ""
+    var gmailValue = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
         barMenuButton.target = revealViewController()
         barMenuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-        
-//        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-//        self.revealViewController().rearViewRevealWidth = 240
-//
+      
     }
 
     override func didReceiveMemoryWarning() {

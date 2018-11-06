@@ -142,6 +142,7 @@
 @class SWRevealViewController;
 @protocol SWRevealViewControllerDelegate;
 
+
 #pragma mark - SWRevealViewController Class
 
 // Enum values for setFrontViewPosition:animated:
