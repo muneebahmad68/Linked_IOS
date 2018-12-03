@@ -1,8 +1,8 @@
 //
-//  requestModelClass.swift
+//  linkUppModel.swift
 //  Linkd
 //
-//  Created by Khawar on 11/20/18.
+//  Created by Khawar on 11/27/18.
 //  Copyright © 2018 Khawar. All rights reserved.
 //
 
